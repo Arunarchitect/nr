@@ -1,6 +1,9 @@
 import React, {useState} from 'react'
+import {Routes as Switch, Route} from 'react-router-dom';
 import {AiOutlineMenu, AiOutlineHome} from 'react-icons/ai'
 import {BiDonateHeart} from 'react-icons/bi'
+import {ImInfo} from 'react-icons/im'
+
 
 const SideNav = () => {
   const [nav, setNav] = useState(false);
@@ -22,6 +25,10 @@ const SideNav = () => {
               <BiDonateHeart size={20} />
               <span className='pl-4'>Donate</span>
             </a>
+            <a onClick={handleNav}  href="#about" className='w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'>
+              <ImInfo size={20} />
+              <span className='pl-4'>Donate</span>
+            </a>
           </div>
         ) : (
           ''
@@ -33,6 +40,9 @@ const SideNav = () => {
               </a>
               <a href="#donate" className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'>
                 < BiDonateHeart />
+              </a>
+              <a href="#about" className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'>
+                < ImInfo />
               </a>
             </div>
           </div>
