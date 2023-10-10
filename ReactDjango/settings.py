@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-qr#b&%tnxd@s=@gp#58bx8s^m$3b8-51907wuc--&g!t1p@b=v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'frontend',
     "corsheaders",
+    'blog',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -121,10 +123,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, "frontend", "frontend", "public"),
-#     os.path.join(BASE_DIR, "frontend", "frontend", "dist")
-# ]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "frontend", "frontend", "public"),
+    os.path.join(BASE_DIR, "frontend", "frontend", "dist")
+]
 STATIC_ROOT = BASE_DIR /"static"
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -136,6 +138,7 @@ CORS_ALLOW_ALL_ORIGINS: False
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
+    "http://127.0.0.1:8000"
 ]
 
 REST_FRAMEWORK = {
