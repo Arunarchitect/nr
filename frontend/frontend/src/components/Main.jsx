@@ -1,5 +1,6 @@
 import Home from "./Home"
 import Header from "./Header"
+import Footer from "./Footer"
 
 function Main() {
 
@@ -7,6 +8,7 @@ function Main() {
     <div className='App'>
       <Header />
       <Home />
+      <Footer/>
     </div>
   )
 }
