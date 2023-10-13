@@ -1,8 +1,12 @@
 import {Link} from 'react-router-dom'
+import {useEffect} from 'react'
 
 const viteLogo = "/static/vite.svg"
 
 function Home() {
+    useEffect(() =>{
+        document.title='Homepage'
+    })
     return (
         <div className="container">
             <h3 className=" pb-2 mb-3 ">Latest Articles <a href="#" className="float-end">See All</a></h3>

@@ -6,3 +6,40 @@
   scroll-behavior: smooth;
 }
  */
+
+ /* Customize Heading Styles */
+h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 30px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 24px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 20px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.img-thumbnail {
+  width: 300px;
+  height: 300px;
+}
+
+.card-img-top {
+  width: 200px; /* Adjust the width to your desired size */
+  height: auto; /* To maintain the aspect ratio */
+}
+
+/* Add your additional custom styles for headings below */

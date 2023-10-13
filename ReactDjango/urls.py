@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from blog.views import *
+from frontend.views import *
 
 
 urlpatterns = [
@@ -23,3 +23,13 @@ urlpatterns = [
     path('', include("frontend.urls")),
     path('api/', include("blog.urls"))
 ]
+
+from django.conf import settings
+from django.views.generic import TemplateView
+
+react_routes = getattr(settings, 'REACT_ROUTES', [])
+
+for route in react_routes:
+    urlpatterns += [
+        path('{}'.format(route), TemplateView.as_view(template_name='new.html'))
+    ]

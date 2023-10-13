@@ -155,3 +155,14 @@ INTERNAL_IPS = [
     "localhost",
     "127.0.0.1"
 ]
+
+REACT_ROUTES = [
+    'login',
+    'person',
+    'article/:article_id',
+    'user-login',
+    'user-register',
+    'user-dashboard',
+    'about',
+    ...
+]
