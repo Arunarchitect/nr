@@ -163,11 +163,13 @@ INTERNAL_IPS = [
 
 REACT_ROUTES = [
     'login',
-    'person',
+    'blog',
     'article/:article_id',
     'user-login',
     'user-register',
     'user-dashboard',
     'about',
+    'register',
+    'post',
     ...
 ]

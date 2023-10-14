@@ -14,24 +14,21 @@ function Home() {
 
   return (
 
-    <body>
-    <div class="container">
-        <div class="left-column">
-        <img src={viteLogo} alt="Blog Cover" className="rounded mx-auto d-block border border-primary" />
+      <div className='container'>
+          <div  className="person-item">
+            <div className="left-column">
+                <img src={viteLogo} alt="" className="justify-center " />
+            </div>
+            <div className="right-column">
+                <div className="justify-center">
+                    <h1>gggg</h1>
+                </div>
+            </div>
+            {/* Add a horizontal line after each item */}
+            <hr className="horizontal-line" />
         </div>
-        <div class="right-column">
-            <h2>Welcome to Modelflick</h2>
-                 <p>With a passionate team of professionals, we specialize in the art of architectural planning, design, and execution in the heart of Kerala.</p>
-
-                <p><strong>Our Promise:</strong> Uncompromising design excellence and meticulous attention to detail, every step of the way.
-
-                    Join us on an architectural journey where your vision becomes a living reality.</p>
-
-        </div>
-    </div>
-    </body>
+      </div>
     
-
 
   );
 }

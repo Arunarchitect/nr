@@ -7,5 +7,8 @@ class ReactSerializer(serializers.ModelSerializer):
         fields = ['full_name','email', 'password','id','image']
         
         
-        
+class BlogSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Blog
+        fields = ['title','subtitle', 'content','id','image']       
         

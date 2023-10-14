@@ -42,7 +42,7 @@ function Header() {
             </li> */}
             
             <li className="nav-item">
-              <Link className="nav-link active" to="/person">Blog</Link>
+              <Link className="nav-link active" to="/blog">Blog</Link>
             </li>
             {/* <li className="nav-item">
               <Link className="nav-link active" to="#">Contact us</Link>
@@ -54,7 +54,7 @@ function Header() {
               <Link className="nav-link active" to="/about">About Us</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" to="/article/:article_id">Art</Link>
+              <Link className="nav-link active" to="/post">Post</Link>
             </li>
           </ul>
         </div>

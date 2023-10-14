@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 
 const baseUrl = 'http://127.0.0.1:8000/api/blog/';
 
-function About() {
+function Blog() {
     const [person, setPerson] = useState([]);
 
     const getPerson = async () => {
@@ -42,4 +42,4 @@ function About() {
     );
 }
 
-export default About;
+export default Blog;

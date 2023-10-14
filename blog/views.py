@@ -16,3 +16,12 @@ class ReactView(generics.ListCreateAPIView):
 class ReactDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = React.objects.all()
     serializer_class = ReactSerializer
+
+class BlogView(generics.ListCreateAPIView):
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer
+
+
+class BlogDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer
