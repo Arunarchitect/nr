@@ -23,14 +23,14 @@ function Blog() {
             <div className="container">
                 {person.map((perso, index) => (
                     <div key={perso.id} className="person-item">
-                        <div className="left-column">
+                        <div className="left-column p-3">
                             <img src={perso.image} alt="" className="justify-center " />
                         </div>
                         <div className="right-column">
                             <div className="email">
                                 <h1>{perso.title}</h1>
-                                <h1>{perso.subtitle}</h1>
-                                <h1>{perso.content}</h1>
+                                <h2>{perso.subtitle}</h2>
+                                <p>{perso.content}</p>
                             </div>
                         </div>
                         {/* Add a horizontal line after each item */}

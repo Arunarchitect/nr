@@ -27,9 +27,9 @@ class Blog(models.Model):
         blank=False,
         default=f'uploads/images/default.png'
     )
-    title = models.TextField(max_length=30)
-    subtitle = models.TextField(max_length=30)
-    content = models.TextField(max_length=30)
+    title = models.TextField(max_length=50)
+    subtitle = models.TextField(max_length=50)
+    content = models.TextField(max_length=1000)
 
     class Meta:
         verbose_name_plural = "Blog"

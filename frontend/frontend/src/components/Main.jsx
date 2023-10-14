@@ -9,6 +9,7 @@ import Dashboard from "./User/Dashboard"
 import Blog from "./Blog"
 import Donate from "./Donate"
 import Post from "./Post";
+import Enquiry from "./Enquiry";
 
 import {Routes as Switch , Route} from 'react-router-dom'
 
@@ -27,6 +28,7 @@ function Main() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/pay" element={<Donate />} />
         <Route path="/post" element={<Post />} />
+        <Route path="/enquiry" element={<Enquiry />} />
       </Switch>
       
       <Footer/>

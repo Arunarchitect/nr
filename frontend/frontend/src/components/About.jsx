@@ -1,45 +1,46 @@
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-
-const baseUrl = 'http://127.0.0.1:8000/api/blog/';
 
 function About() {
-    const [person, setPerson] = useState([]);
+  useEffect(() => {
+    document.title = 'About Page';
+  });
 
-    const getPerson = async () => {
-        const response = await axios.get(baseUrl);
-        setPerson(response.data);
-    }
+  const viteLogo = "/static/model.svg";
 
-    useEffect(() => {
-        getPerson();
-    }, []);
+  // Apply CSS styles to the image for size adjustment
+  const imageStyles = {
+    width: '450px', // Set the desired width
+    height: 'auto', // Maintain the aspect ratio
+  };
 
-    return (
-        <div>
-            <div className="container">
-                {person.map((perso, index) => (
-                    <div key={perso.id} className="person-item">
-                        <div className="left-column">
-                            <img src={perso.image} alt="" className="justify-center " />
-                        </div>
-                        <div className="right-column">
-                            <div className="email">
-                                <h1>{perso.title}</h1>
-                                <h1>{perso.subtitle}</h1>
-                                <h1>{perso.content}</h1>
-                            </div>
-                        </div>
-                        {/* Add a horizontal line after each item */}
-                        <hr className="horizontal-line" />
-                    </div>
-                ))}
-            </div>
+  return (
+    <div className='container'>
+      <div className="person-item">
+        <div className="left-column">
+          <img src={viteLogo} alt="" className="justify-center" style={imageStyles} />
         </div>
-    );
+        <div className="right-column">
+          <div className="justify-center">
+            <h1>About Us</h1>
+            <h3>
+              As an architectural service in India, our deliverables encompass architectural design concepts, detailed plans, 3D visualizations, cost estimates, site analysis, and regulatory approvals. We provide comprehensive interior design and construction drawings, specify materials and schedules, and assist with obtaining permits and approvals. Our goal is to ensure your project adheres to local regulations and is executed efficiently while fulfilling your vision.
+            </h3>
+
+            <br /> {/* Add a line break */}
+            <p>Reg.no: UDYAM-KL-06-0031801</p>
+            
+            <p>Address: Modelflick, Kallelibhagom.p.o, Kollam, 690519</p>
+            <p>Email: modelflick@gmail.com</p>
+            <br /> {/* Add a line break */}
+            <p>Our charges and services are liable to The Architects Acts, 1972, Govt. of India.</p>
+          </div>
+        </div>
+        {/* Add a horizontal line after each item */}
+        <hr className="horizontal-line" />
+      </div>
+    </div>
+  );
 }
 
 export default About;
