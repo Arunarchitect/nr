@@ -26,6 +26,7 @@ function Register() {
         timeout: 5000,
       }).then((response) => {
         console.log(response.data);
+        window.alert('You are successfully registered');
         navigate('/');
       }).catch((error) => {
         console.error(error);
@@ -53,7 +54,7 @@ function Register() {
                         <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
                         <input onChange={(e) => setPassword(e.target.value)} name="password" type="password" className="form-control" />
                         </div>
-                        <button onClick={RegisterInfo}  className="btn btn-primary">Register</button>
+                        <button onClick={RegisterInfo} type='button'  className="btn btn-primary">Register</button>
                     </form>
                     </div>
                 </div>

@@ -1,88 +1,40 @@
-import {Link} from 'react-router-dom'
-import {useEffect} from 'react'
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-const viteLogo = "/static/vite.svg"
+
 
 function Home() {
-    useEffect(() =>{
-        document.title='Homepage'
-    })
-    return (
-        <div className="container">
-            <h3 className=" pb-2 mb-3 ">Latest Articles <a href="#" className="float-end">See All</a></h3>
-            <div className="row">
-                <div className="col-md-3">
-                    <div className ="card" >
-                    <Link to="article/1"><img src={viteLogo} className ="card-img-top" alt="..."/></Link>
-                        <div className ="card-body">
-                            <h5 className ="card-title"> <Link to="article/1"> Blog Title</Link></h5>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-3">
-                    <div className ="card" >
-                    <a href="#"><img src={viteLogo} className ="card-img-top" alt="..."/></a> 
-                        <div className ="card-body">
-                            <h5 className ="card-title"> <a href="#"> Blog Title</a></h5>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-3">
-                    <div className ="card" >
-                    <a href="#"><img src={viteLogo} className ="card-img-top" alt="..."/></a> 
-                        <div className ="card-body">
-                            <h5 className ="card-title"> <a href="#"> Blog Title</a></h5>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-3">
-                    <div className ="card" >
-                    <a href="#"><img src={viteLogo} className ="card-img-top" alt="..."/></a> 
-                        <div className ="card-body">
-                            <h5 className ="card-title"> <a href="#"> Blog Title</a></h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <h3 className=" pb-1 mb-4">Professionals<a href="#" className="float-end">See All</a></h3>
-            <div className="row">
-                <div className="col-md-3">
-                    <div className ="card" >
-                    <a href="#"><img src={viteLogo} className ="card-img-top" alt="..."/></a> 
-                        <div className ="card-body">
-                            <h5 className ="card-title"> <a href="#"> Blog Title</a></h5>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-3">
-                    <div className ="card" >
-                    <a href="#"><img src={viteLogo} className ="card-img-top" alt="..."/></a> 
-                        <div className ="card-body">
-                            <h5 className ="card-title"> <a href="#"> Blog Title</a></h5>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-3">
-                    <div className ="card" >
-                    <a href="#"><img src={viteLogo} className ="card-img-top" alt="..."/></a> 
-                        <div className ="card-body">
-                            <h5 className ="card-title"> <a href="#"> Blog Title</a></h5>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-3">
-                    <div className ="card" >
-                    <a href="#"><img src={viteLogo} className ="card-img-top" alt="..."/></a> 
-                        <div className ="card-body">
-                            <h5 className ="card-title"> <a href="#"> Blog Title</a></h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  useEffect(() => {
+    document.title = 'Homepage';
+  });
 
-    );
-  }
-  
-  export default Home;
-  
+  const viteLogo = "/static/Logo.png"
+
+
+
+  return (
+
+    <body>
+    <div class="container">
+        <div class="left-column">
+        <img src={viteLogo} alt="Blog Cover" className="rounded mx-auto d-block border border-primary" />
+        </div>
+        <div class="right-column">
+            <h2>Welcome to Modelflick</h2>
+                 <p>With a passionate team of professionals, we specialize in the art of architectural planning, design, and execution in the heart of Kerala.</p>
+
+                <p><strong>Our Promise:</strong> Uncompromising design excellence and meticulous attention to detail, every step of the way.
+
+                    Join us on an architectural journey where your vision becomes a living reality.</p>
+
+        </div>
+    </div>
+    </body>
+    
+
+
+  );
+}
+
+
+export default Home;

@@ -7,6 +7,7 @@ import Login from "./User/Login"
 import Register from "./User/Register"
 import Dashboard from "./User/Dashboard"
 import Person from "./Person"
+import Donate from "./Donate"
 
 import {Routes as Switch , Route} from 'react-router-dom'
 
@@ -23,6 +24,7 @@ function Main() {
         <Route path="/user-register" element={<Register />} />
         <Route path="/user-dashboard" element={<Dashboard />} />
         <Route path="/person" element={<Person />} />
+        <Route path="/pay" element={<Donate />} />
       </Switch>
       
       <Footer/>

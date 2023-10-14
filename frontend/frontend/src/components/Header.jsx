@@ -5,7 +5,7 @@ function Header() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">Modelflick</Link>
+        <Link className="navbar-brand" to="/">Modelflick.com | Planning Assistance</Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -22,7 +22,7 @@ function Header() {
             <li className="nav-item">
               <Link className="nav-link active" to="/">Home</Link>
             </li>
-            <li className="nav-item dropdown">
+            {/* <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle active"
                 href="#"
@@ -39,12 +39,22 @@ function Header() {
                 <li><Link className='dropdown-item' to= '/user-dashboard'>Dashboard</Link></li>
                 <li><Link className='dropdown-item' to= '/user-login'>Logout</Link></li>
               </ul>
+            </li> */}
+            
+            <li className="nav-item">
+              <Link className="nav-link active" to="/person">Blog</Link>
+            </li>
+            {/* <li className="nav-item">
+              <Link className="nav-link active" to="#">Contact us</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" to="/about">About</Link>
+              <Link className="nav-link active" to="/pay">Pay</Link>
+            </li> */}
+            <li className="nav-item">
+              <Link className="nav-link active" to="/about">About Us</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" to="/person">Person</Link>
+              <Link className="nav-link active" to="/article/:article_id">Art</Link>
             </li>
           </ul>
         </div>
