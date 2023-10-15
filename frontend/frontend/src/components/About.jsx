@@ -6,37 +6,62 @@ function About() {
     document.title = 'About Page';
   });
 
-  const viteLogo = "/static/model.svg";
-
-  // Apply CSS styles to the image for size adjustment
   const imageStyles = {
-    width: '450px', // Set the desired width
-    height: 'auto', // Maintain the aspect ratio
+    width: '450px',
+    height: 'auto',
   };
 
   return (
-    <div className='container'>
+    <div className="container">
       <div className="person-item">
-        <div className="left-column">
-          <img src={viteLogo} alt="" className="justify-center" style={imageStyles} />
-        </div>
-        <div className="right-column">
+        <div className="left-column p-4">
           <div className="justify-center">
-            <h1>About Us</h1>
-            <h3>
-              As an architectural service in India, our deliverables encompass architectural design concepts, detailed plans, 3D visualizations, cost estimates, site analysis, and regulatory approvals. We provide comprehensive interior design and construction drawings, specify materials and schedules, and assist with obtaining permits and approvals. Our goal is to ensure your project adheres to local regulations and is executed efficiently while fulfilling your vision.
-            </h3>
+            <h1>Services and policies</h1>
 
-            <br /> {/* Add a line break */}
-            <p>Reg.no: UDYAM-KL-06-0031801</p>
-            
-            <p>Address: Modelflick, Kallelibhagom.p.o, Kollam, 690519</p>
-            <p>Email: modelflick@gmail.com</p>
-            <br /> {/* Add a line break */}
-            <p>Our charges and services are liable to The Architects Acts, 1972, Govt. of India.</p>
+            <h3>Terms and Conditions</h3>
+            <p>
+              By using our services, you agree to comply with these terms.
+            </p>
+            <p>We provide architectural and interior design services in compliance with The Architects Act, 1972, of the Government of India.</p>
+            <br />
+
+            <h3>Privacy Policy</h3>
+            <p>
+              We value your privacy and protect your personal information.
+            </p>
+            <p>
+              We do not share your data with third parties, except as required by law.
+            </p>
+            <br />
+
+            <h3>Cancellation and Refund Policy</h3>
+            <p>
+              Cancellation timeframe varies by project, with a minimum of 24 hours. If canceled within the timeframe, a 75% refund will be issued.
+            </p>
+            <p>
+              In case of failure to deliver the agreed-upon project, a total refund will be made.
+            </p>
+            <br />
+
+          
           </div>
         </div>
-        {/* Add a horizontal line after each item */}
+        <div className="right-column p-4">
+          <div className="justify-center">
+          <h3>Shipping and Delivery</h3>
+            <p>
+              Our services involve digital files delivered electronically; no physical shipping is required.
+            </p>
+            <p>
+              Delivery times are project-dependent and will be communicated during project initiation.
+            </p>
+            <br />
+            <h3>Contact Information</h3>
+            <p>
+              Contact us at Modelflick, Kallelibhagom.p.o, Kollam, 690519, or email us at modelflick@gmail.com.
+            </p>
+          </div>
+        </div>
         <hr className="horizontal-line" />
       </div>
     </div>

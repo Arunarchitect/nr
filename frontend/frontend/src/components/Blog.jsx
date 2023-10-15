@@ -1,27 +1,27 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 
-const baseUrl = 'http://127.0.0.1:8000/api/blog/';
 
 function Blog() {
     const [person, setPerson] = useState([]);
     const [error, setError] = useState(null);
 
-    const getPerson = async () => {
-        try {
-            const response = await axios.get(baseUrl);
-            setPerson(response.data);
-        } catch (err) {
-            setError(err);
-            console.error(err); // Log the error to the console
-        }
-    }
-
     useEffect(() => {
-        getPerson();
+        const baseUrl = 'https://127.0.0.1:8000/api/blog/';
+
+        const getPerson = async () => {
+            try {
+                const response = await axios.get(baseUrl);
+                setPerson(response.data);
+            } catch (err) {
+                setError(err);
+                console.error(err); // Log the error to the console
+            }
+        }
+
+        getPerson(); // Call the getPerson function to make the GET request
+
     }, []);
 
     return (
