@@ -8,10 +8,16 @@ const baseUrl = 'http://127.0.0.1:8000/api/blog/';
 
 function Blog() {
     const [person, setPerson] = useState([]);
+    const [error, setError] = useState(null);
 
     const getPerson = async () => {
-        const response = await axios.get(baseUrl);
-        setPerson(response.data);
+        try {
+            const response = await axios.get(baseUrl);
+            setPerson(response.data);
+        } catch (err) {
+            setError(err);
+            console.error(err); // Log the error to the console
+        }
     }
 
     useEffect(() => {
@@ -21,22 +27,26 @@ function Blog() {
     return (
         <div>
             <div className="container">
-                {person.map((perso, index) => (
-                    <div key={perso.id} className="person-item">
-                        <div className="left-column p-3">
-                            <img src={perso.image} alt="" className="justify-center " />
-                        </div>
-                        <div className="right-column">
-                            <div className="email">
-                                <h1>{perso.title}</h1>
-                                <h2>{perso.subtitle}</h2>
-                                <p>{perso.content}</p>
+                {error ? (
+                    <div>Error: {error.message}</div>
+                ) : (
+                    person.map((perso, index) => (
+                        <div key={perso.id} className="person-item">
+                            <div className="left-column p-3">
+                                <img src={perso.image} alt="" className="justify-center" />
                             </div>
+                            <div className="right-column">
+                                <div className="email">
+                                    <h1>{perso.title}</h1>
+                                    <h2>{perso.subtitle}</h2>
+                                    <p>{perso.content}</p>
+                                </div>
+                            </div>
+                            {/* Add a horizontal line after each item */}
+                            <hr className="horizontal-line" />
                         </div>
-                        {/* Add a horizontal line after each item */}
-                        <hr className="horizontal-line" />
-                    </div>
-                ))}
+                    ))
+                )}
             </div>
         </div>
     );
