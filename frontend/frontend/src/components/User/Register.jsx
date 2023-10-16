@@ -21,7 +21,7 @@ function Register() {
   
       await axios({
         method: 'post',
-        url: 'http://127.0.0.1:8000/api/react/',
+        url: 'https://modelflick.com/api/react/',
         data: formfield,
         timeout: 5000,
       }).then((response) => {

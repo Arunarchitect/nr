@@ -25,7 +25,7 @@ function Post() {
   
       await axios({
         method: 'post',
-        url: 'http://127.0.0.1:8000/api/blog/',
+        url: 'https://modelflick.com/api/blog/',
         data: formField,
         timeout: 5000,
       }).then((response) => {

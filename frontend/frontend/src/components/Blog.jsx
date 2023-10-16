@@ -8,7 +8,7 @@ function Blog() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        const baseUrl = 'https://127.0.0.1:8000/api/blog/';
+        const baseUrl = 'https://modelflick.com/api/blog/';
 
         const getPerson = async () => {
             try {
