@@ -174,5 +174,7 @@ REACT_ROUTES = [
     'post',
     'about',
     'enquiry',
+    'article',
+    'bar',
     ...
 ]

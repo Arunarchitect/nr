@@ -11,7 +11,11 @@ import Donate from "./Donate"
 import Post from "./Post";
 import Enquiry from "./Enquiry";
 
+
+
 import {Routes as Switch , Route} from 'react-router-dom'
+import { useState } from "react";
+import { BarChart, userData } from './chart/BarChart';
 
 function Main() {
 
@@ -29,6 +33,8 @@ function Main() {
         <Route path="/pay" element={<Donate />} />
         <Route path="/post" element={<Post />} />
         <Route path="/enquiry" element={<Enquiry />} />
+        <Route path="/article" element={<Article />} />
+        <Route path="/bar" element={<BarChart chartData={userData} />} />
       </Switch>
       
       <Footer/>

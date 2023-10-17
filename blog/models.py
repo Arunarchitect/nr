@@ -36,3 +36,41 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title
+
+
+from django.core.validators import MinValueValidator, MaxValueValidator
+
+class CostEstimation(models.Model):
+    structure = models.FloatField(
+        validators=[MinValueValidator(0), MaxValueValidator(100)],
+        blank=True,
+        null=True
+    )
+    brickwork = models.FloatField(
+        validators=[MinValueValidator(0), MaxValueValidator(100)],
+        blank=True,
+        null=True
+    )
+    # Add other fields for the remaining cost factors with similar validators
+
+    class Meta:
+        verbose_name_plural = "Cost Estimations"
+
+    def save(self, *args, **kwargs):
+        entered_fields = [field for field in self._meta.fields if getattr(self, field.name) is not None]
+        num_entered_fields = len(entered_fields)
+        total_entered_value = sum(getattr(self, field.name) for field in entered_fields)
+        
+        if num_entered_fields < len(self._meta.fields) - 1:
+            # Calculate the value to distribute among unentered fields
+            remaining_value = 100 - total_entered_value
+            num_unentered_fields = len(self._meta.fields) - 1 - num_entered_fields
+            value_per_unentered_field = remaining_value / num_unentered_fields
+
+            # Set the values for unentered fields
+            for field in self._meta.fields:
+                if field != self._meta.fields[0]:  # Skip the first field (usually the ID field)
+                    if not getattr(self, field.name):
+                        setattr(self, field.name, value_per_unentered_field)
+
+        super(CostEstimation, self).save(*args, **kwargs)
