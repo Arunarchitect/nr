@@ -4,3 +4,4 @@ from . models import *
 
 admin.site.register (React)
 admin.site.register (Blog)
+admin.site.register (CostEstimation)

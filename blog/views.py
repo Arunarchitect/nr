@@ -20,8 +20,14 @@ class ReactDetailView(generics.RetrieveUpdateDestroyAPIView):
 class BlogView(generics.ListCreateAPIView):
     queryset = Blog.objects.all()
     serializer_class = BlogSerializer
-
-
 class BlogDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Blog.objects.all()
     serializer_class = BlogSerializer
+
+
+class CostView(generics.ListCreateAPIView):
+    queryset = CostEstimation.objects.all()
+    serializer_class = CostSerializer
+class CostDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = CostEstimation.objects.all()
+    serializer_class = CostSerializer

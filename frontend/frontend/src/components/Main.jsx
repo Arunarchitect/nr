@@ -15,7 +15,7 @@ import Enquiry from "./Enquiry";
 
 import {Routes as Switch , Route} from 'react-router-dom'
 import { useState } from "react";
-import { BarChart, userData } from './chart/BarChart';
+import BarChart from './chart/BarChart'; // Import the default export
 
 function Main() {
 
@@ -34,7 +34,7 @@ function Main() {
         <Route path="/post" element={<Post />} />
         <Route path="/enquiry" element={<Enquiry />} />
         <Route path="/article" element={<Article />} />
-        <Route path="/bar" element={<BarChart chartData={userData} />} />
+        <Route path="/bar" element={<BarChart  />} />
       </Switch>
       
       <Footer/>

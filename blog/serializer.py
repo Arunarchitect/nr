@@ -12,3 +12,9 @@ class BlogSerializer(serializers.ModelSerializer):
         model = Blog
         fields = ['title','subtitle', 'content','id','image']       
         
+
+class CostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CostEstimation
+        fields = ['designing', 'structure', 'mechanical', 'electrical', 'plumbing', 'painting', 'interior']     
+    

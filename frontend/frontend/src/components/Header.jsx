@@ -54,7 +54,7 @@ function Header() {
               <Link className="nav-link active" to="/about">About Us</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" to="/article;">Costfinder</Link>
+              <Link className="nav-link active" to="/bar">Costfinder</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link active" to="/enquiry">Enquiry</Link>

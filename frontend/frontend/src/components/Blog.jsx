@@ -23,7 +23,7 @@ function Blog() {
         getPerson(); // Call the getPerson function to make the GET request
 
     }, []);
-
+ 
     return (
         <div>
             <div className="container">

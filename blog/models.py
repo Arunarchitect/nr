@@ -41,15 +41,41 @@ class Blog(models.Model):
 from django.core.validators import MinValueValidator, MaxValueValidator
 
 class CostEstimation(models.Model):
+    designing = models.FloatField(
+        validators=[MinValueValidator(0), MaxValueValidator(100)],
+        blank=True,
+        null=True
+    )
     structure = models.FloatField(
         validators=[MinValueValidator(0), MaxValueValidator(100)],
         blank=True,
         null=True
     )
-    brickwork = models.FloatField(
+
+    mechanical = models.FloatField(
         validators=[MinValueValidator(0), MaxValueValidator(100)],
         blank=True,
         null=True
+    )
+    electrical = models.FloatField(
+        validators=[MinValueValidator(0), MaxValueValidator(100)],
+        blank=True,
+        null=True
+    )
+    plumbing = models.FloatField(
+        validators=[MinValueValidator(0), MaxValueValidator(100)],
+        blank=True,
+        null=True
+    )
+    painting = models.FloatField(
+        validators=[MinValueValidator(0), MaxValueValidator(100)],
+        blank=True,
+        null=True
+    )
+    interior = models.FloatField(
+    validators=[MinValueValidator(0), MaxValueValidator(100)],
+    blank=True,
+    null=True
     )
     # Add other fields for the remaining cost factors with similar validators
 

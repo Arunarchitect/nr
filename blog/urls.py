@@ -5,5 +5,7 @@ urlpatterns = [
     path('react/', views.ReactView.as_view()),
     path('react/<int:pk>/', views.ReactDetailView.as_view()),
     path('blog/', views.BlogView.as_view()),
-    path('blog/<int:pk>/', views.BlogDetailView.as_view())
+    path('blog/<int:pk>/', views.BlogDetailView.as_view()),
+    path('cost/', views.CostView.as_view()),
+    path('cost/<int:pk>/', views.CostDetailView.as_view())
 ]
