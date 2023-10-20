@@ -6,11 +6,11 @@ function Home() {
     document.title = 'Homepage';
   });
 
-  const viteLogo = "/static/model.svg";
+  const viteLogo = "/static/model.png";
 
   // Apply CSS styles to the image for size adjustment
   const imageStyles = {
-    width: '450px', // Set the desired width
+    width: '600px', // Set the desired width
     height: 'auto', // Maintain the aspect ratio
   };
 
